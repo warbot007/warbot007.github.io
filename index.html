@@ -1,11 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("demo_test.asp", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+});
+</script>
+</head>
+<body>
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>404 Brain Not Found</title>
-</head><body>
-<h1>Brain Not Found</h1>
-<p>The requested URL <script>document.write (location.href); </script> was not found on this server.</p>
-<p>Additionally, a 404 Not Found
-error was encountered while trying to use an ErrorDocument to handle the request.</p>
-<p>So, Here Is A PoTaTo  </p>
-</body></html>
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
